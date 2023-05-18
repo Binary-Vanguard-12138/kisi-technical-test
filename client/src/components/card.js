@@ -9,6 +9,17 @@ export default function Card(props) {
       <p className="title" style={{ padding: "20px" }}>
         {title}
       </p>
+      <p
+        style={{
+          fontSize: "20px",
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          paddingRight: "20px",
+        }}
+      >
+        {">"}
+      </p>
       <div
         className="overlay"
         style={{
@@ -18,6 +29,19 @@ export default function Card(props) {
       >
         <p className="title">{title}</p>
         <p className="description">{description}</p>
+
+        <p
+          style={{
+            fontSize: "20px",
+            position: "absolute",
+            bottom: 0,
+            right: 0,
+            paddingRight: "20px",
+            color: hover_color.color,
+          }}
+        >
+          {">"}
+        </p>
       </div>
     </div>
   );

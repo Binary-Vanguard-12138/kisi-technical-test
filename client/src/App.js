@@ -58,23 +58,7 @@ function App() {
           type="file"
           onChange={handleFileChange}
         />
-        <button
-          onClick={handleClick}
-          style={{
-            background: "#4A52FF",
-            borderRadius: "25px",
-            border: "none",
-            width: "98px",
-            height: "34px",
-            color: "white",
-            fontFamily: "Neue Haas Unica",
-            fontWeight: 400,
-            fontSize: "20px",
-            lineHeight: "32px",
-          }}
-        >
-          Button
-        </button>
+        <button onClick={handleClick}>Button</button>
       </div>
     </div>
   );

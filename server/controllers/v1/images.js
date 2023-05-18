@@ -15,7 +15,7 @@ const getImages = (req, res, next) => {
   const imagesFiles = fs.readdirSync(imagesDir);
 
   // Associate each article with its respective image (if any)
-  const articlesWithImages = imagesFiles.map((imagesFile, idx) => {
+  const articlesWithImages = imagesFiles.sort().map((imagesFile, idx) => {
     const articleData = articlesData[idx % imagesFiles.length];
     const articlesWithImage = { image: `images/${imagesFile}`, ...articleData };
     return articlesWithImage;
@@ -34,7 +34,10 @@ const uploadImage = (req, res, next) => {
       const temp_file_arr = file.originalname.split(".");
       const temp_file_name = temp_file_arr[0];
       const temp_file_ext = temp_file_arr[1];
-      callback(null, `${temp_file_name}_${Date.now()}.${temp_file_ext}`);
+      callback(
+        null,
+        `new_image_${Date.now()}_${temp_file_name}.${temp_file_ext}`
+      );
     },
   });
   const upload = multer({ storage: storage }).single("image");

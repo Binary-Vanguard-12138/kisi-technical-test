@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
 
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("../../../public/fonts/NeueHaasUnica-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
 body {
   background: rgb(19, 19, 19);
   color: #fff;
@@ -8,9 +15,22 @@ body {
 
 p {
   font-family: "Neue Haas Unica";
-  font-weight: 400;
   font-size: "20px";
   line-height: "24px";
+}
+
+button {
+  background: rgb(74, 82, 255);
+  border-radius: 25px;
+  border: none;
+  width: 98px;
+  height: 34px;
+  color: white;
+  font-family: "Neue Haas Unica";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  cursor: pointer;
 }
 
 .card {
@@ -47,6 +67,8 @@ p {
   width: 100%;
   opacity: 0;
   transition: 0.5s ease;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
 }
 
 .card:hover .overlay {
