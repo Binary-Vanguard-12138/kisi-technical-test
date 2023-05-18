@@ -6,6 +6,13 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
+p {
+  font-family: "Neue Haas Unica";
+  font-weight: 400;
+  font-size: "20px";
+  line-height: "24px";
+}
+
 .card {
   display: flex;
   flex-direction: column;
