@@ -3,7 +3,7 @@ const fs = require("fs");
 const multer = require("multer");
 const logger = require("../../helpers/logger");
 
-const imagesDir = path.join(__dirname, "../../public/images/");
+const imagesDir = path.join(__dirname, "../../../public/images/");
 
 const getImages = (req, res, next) => {
   const articlesFile = path.join(__dirname, "../../data/articles.json");

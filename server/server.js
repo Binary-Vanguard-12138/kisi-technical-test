@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("express");
 const cookieParser = require("cookie-parser");
 
-const logger = require("./helpers/logger");
+const logger = require("./src/helpers/logger");
 
 const app = express();
 app.use(helmet());
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 // registering routes
-app.use("/api/v1", require("./routes/api/v1"));
+app.use("/api/v1", require("./src/routes/api/v1"));
 app.use(express.static("public"));
 
 // serve up production assets
